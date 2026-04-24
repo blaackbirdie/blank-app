@@ -1,9 +1,27 @@
 import streamlit as st
 st.markdown("""
 <style>
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-header {visibility: hidden;}
+/* Streamlit Cloud badge */
+a[href*="streamlit.io/cloud"] {
+    display: none !important;
+}
+
+/* Creator avatar block */
+div[data-testid="appCreatorAvatar"] {
+    display: none !important;
+}
+
+/* иногда обёртка */
+._profileContainer_gzau3_53 {
+    display: none !important;
+}
+</style>
+""", unsafe_allow_html=True)
+st.markdown("""
+<style>
+div:has(img[data-testid="appCreatorAvatar"]) {
+    display: none !important;
+}
 </style>
 """, unsafe_allow_html=True)
 import pandas as pd
